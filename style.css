@@ -408,14 +408,26 @@ header a:hover, footer a:hover {
 }
 
 .hmj-ilkom {
-  order: 2;
+  order: 5;
 }
 
 .palapa-rental {
-  order: 3;
+  order: 6;
 }
 
 .cm-lampung {
+  order: 7;
+}
+
+.seeds {
+  order: 2;
+}
+
+.sanber {
+  order: 3;
+}
+
+.unila {
   order: 4;
 }
 
@@ -442,6 +454,16 @@ header a:hover, footer a:hover {
 }
 .exp-lists li {
   margin-left: 1rem;
+}
+
+.kerjakuy {
+  text-decoration: none;
+  color: #5e6f78;
+  font-weight: 500;
+}
+.kerjakuy:hover, .kerjakuy:active {
+  text-decoration: underline;
+  color: #283e4a;
 }
 
 .right-side-exp {

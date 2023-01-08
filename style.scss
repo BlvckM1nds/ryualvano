@@ -442,18 +442,13 @@ header a, footer a {
 }
 
 // JOB ORDER
-.nuwomed {
-	order: 1;
-}
-.hmj-ilkom {
-	order: 2;
-}
-.palapa-rental {
-	order: 3;
-}
-.cm-lampung {
-	order: 4;
-}
+.nuwomed { order: 1; }
+.hmj-ilkom { order: 5; }
+.palapa-rental { order: 6; }
+.cm-lampung { order: 7; }
+.seeds { order: 2; }
+.sanber { order: 3; }
+.unila { order: 4; }
 
 .left-side-exp {
 	h3 {
@@ -480,6 +475,17 @@ header a, footer a {
 
 	li {
 		margin-left: 1rem;
+	}
+}
+
+.kerjakuy {
+	text-decoration: none;
+	color: $cadet;
+	font-weight: 500;
+	
+	&:hover, &:active {
+		text-decoration: underline;
+		color: $charcoal;
 	}
 }
 
