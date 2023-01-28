@@ -1,0 +1,134 @@
+@media screen and (max-width: 767px) {
+  body, html {
+      width: fit-content;
+      overflow-x: hidden;
+  }
+  .linkin-contact, .wa-contact {
+  width: 35px;
+      padding: 10px;
+  }
+  .linkin-contact span, .wa-contact span {
+      font-size: 1.25rem;
+  }
+  .linkin-contact p, .wa-contact p {
+      display: none;
+  }
+  .linkin {
+      bottom: 100px;
+  }
+
+  header .container {
+      padding-inline: 2%;
+  }
+  .header-contents nav {
+      display: none;
+  }
+  .header-contents .nav-three-bars {
+      display: initial;
+      font-size: 32px;
+  }
+  .header-contents .sneak-about {
+      font-size: 1rem;
+  }
+
+  .section-title {
+      font-size: 2.65rem;
+  }
+
+  .education-detail, .experience-detail {
+      margin-top: 2.25rem;
+  }
+
+  .detail {
+      display: block;
+      padding-inline: 20px;
+
+      .sect-h3 {
+          font-size: 1.6rem;
+      }
+      .sect-h4 {
+          font-size: 1.35rem;
+          margin-bottom: 10px;
+      }
+      p, ul {
+          font-size: .9rem;
+      }
+      .date p {
+          font-size: 1.2rem;
+      }
+  }
+
+  #about {
+      padding-block: 8rem 6rem;
+  }
+  .hero-ryu img {
+      max-width: 160px;
+  }
+  .hero-ryu h1 {
+      font-size: 5rem;
+  }
+  .hero-ryu .sneak-about {
+      font-size: 1.1rem;
+  }
+  .detail-ryu p {
+      font-size: 1rem;
+  }
+  .contact-icons {
+      width: fit-content;
+      display: grid;
+      grid-template-columns: repeat(3, 0.1fr);
+      justify-items: center;
+  }
+  .right-side-exp, .right-side-edu {
+      margin-top: 10px;
+  }
+  .subtitle-skills {
+      font-size: 1.6rem;
+  }
+  .tools-icons {
+      margin-top: 1.1rem;
+  }
+  .soft-hard-skills {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2.25rem;
+
+      .sect-h4 {
+          font-size: 1.35rem;
+      }
+      .skills-list {
+          font-size: .9rem;
+      }
+  }
+  .cont-prog-tools h3 {
+      margin-top: 2.25rem;
+  }
+  .skills-div {
+      display: block;
+      text-align: center;
+      margin: auto;
+  }
+  .certif-lists {
+      margin-top: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .certi-span {
+          display: none;
+      }
+  }
+  .tools-icons {
+      font-size: 2.5rem;
+  }
+  .upper-footer {
+      gap: 1.5rem;
+      padding-inline: 20px;
+      box-sizing: border-box;
+  }
+  .intro-ryu-footer h2 {
+      line-height: 1.15;
+  }
+}
