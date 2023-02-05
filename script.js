@@ -41,7 +41,7 @@ const workExperiences = {
   acc: {
     uniqueCode: 'acc',
     role: 'Data Analyst',
-    company: 'Astra Credit Companies (ACC)',
+    company: 'Astra Credit Companies',
     type: 'Internship',
     activities: [
       'Created interactive dashboards of credit approval within a certain period of time with Tableau & Power BI.',
