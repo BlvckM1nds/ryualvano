@@ -46,7 +46,7 @@ const workExperiences = {
     activities: [
       'Created interactive dashboards of credit approval within a certain period of time with Tableau & Power BI.',
       'Be able to produced stored procedural functions for daily data preparation with SQL.',
-      "Performed daily analysis on the market and ACC's competitors (other leasing companies)",
+      "Performed daily analysis on the market and ACC's competitors.",
       'Introduced and learned about the business process especially in the scope of leasing company.'
     ],
     date: 'February 2023 - present'
