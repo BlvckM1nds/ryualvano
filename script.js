@@ -44,7 +44,7 @@ const workExperiences = {
     company: 'Astra Credit Companies',
     type: 'Internship',
     activities: [
-      'Created interactive dashboards of credit approval within a certain period of time with Tableau & Power BI.',
+      'Created interactive dashboards of Daihatsu brand credit approval within a certain period of time using Tableau.',
       'Be able to produced stored procedural functions for daily data preparation with SQL.',
       "Performed daily analysis on the market and ACC's competitors.",
       'Introduced and learned about the business process especially in the scope of leasing company.'
