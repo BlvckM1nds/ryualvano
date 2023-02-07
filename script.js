@@ -46,7 +46,7 @@ const workExperiences = {
     activities: [
       'Created interactive dashboards of Daihatsu brand credit approval within a certain period of time using Tableau.',
       'Be able to produced stored procedural functions for daily data preparation with SQL.',
-      "Performed daily analysis on the market and ACC's competitors.",
+      'Performed daily data analysis on Daihatsu direct-selling credit validity.',
       'Introduced and learned about the business process especially in the scope of leasing company.'
     ],
     date: 'February 2023 - present'
