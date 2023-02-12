@@ -245,12 +245,13 @@ header .logo-text:hover, footer a:hover {
 .hero-ryu img, .hero-ryu h1, .hero-ryu p {
   margin-bottom: 1rem;
 }
-.hero-ryu img {
+.hero-ryu .self-pic {
   max-width: 20%;
   border-radius: 50%;
   border: 10px solid rgba(255, 255, 255, 0.25);
   box-sizing: content-box;
   transition: 0.2s;
+  overflow: hidden;
 }
 .hero-ryu img:hover {
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));

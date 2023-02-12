@@ -257,12 +257,13 @@ header .logo-text, footer a {
 		margin-bottom: 1rem;
 	}
 	
-	img {
+	.self-pic {
 		max-width: 20%;
 		border-radius: 50%;
 		border: 10px solid rgba($white, .25);
 		box-sizing: content-box;
 		transition: .2s;
+		overflow: hidden;
 	}
 
 	img:hover {

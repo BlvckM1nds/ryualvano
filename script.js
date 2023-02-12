@@ -217,12 +217,14 @@ const certifications = [
   ['Udemy+Build Responsive Real-World Websites with HTML and CSS+2022+https://www.udemy.com/certificate/UC-31af5594-c03e-42fd-b468-e51340c379ed/'],
   ['EF Standard English Test (EF SET)+EF SET English Certificate 64/100 (C1 Advanced)+2022+https://www.efset.org/cert/XAWdKJ'],
   ['SanberCode+Bootcamp ReactJS Web Frontend+2022+https://sanbercode.com/sertifikat/generate/6240c30e-4e01-4c5e-87c1-ab0c2b9f708f'],
-  ['RevoU+Intro to Data Analytics+2023+https://certificates.revou.co/ryu-alvano-certificate-completion-damc23.pdf']
+  ['RevoU+Intro to Data Analytics+2023+https://certificates.revou.co/ryu-alvano-certificate-completion-damc23.pdf'],
+  ['365 Careers+SQL - MySQL for Data Analytics and Business Intelligence+2023+https://www.udemy.com/certificate/UC-80d02f67-03c1-4551-b167-705c749e8214/']
 ];
 
 
 // html docs
 const sideBar = document.querySelector('.nav-three-bars');
+const labelLiveTime = document.querySelector('.live-time');
 
 const umnRelevantLists = document.querySelector('.umn-relevant-lists');
 const umnActivityLists = document.querySelector('.umn-activity-lists');
@@ -248,6 +250,21 @@ const certifTitle = document.querySelector('.title-certif-exp');
 const certifContainer = document.querySelector('.cont-certif');
 const certifLists = document.querySelector('.certif-lists');
 
+// FOOTER LIVE-TIME
+const liveTime = function() {
+  // day
+  let day = new Date().toLocaleDateString(['en'], { weekday: "long" });
+  let date = new Date().getDate();
+  let month = new Date().toLocaleString('en', { month: "long" });
+  let year = new Date().getFullYear();
+  
+  // time
+  let hour = `${new Date().getHours()}`.padStart(2, 0);
+  let minute = `${new Date().getMinutes()}`.padStart(2, 0);
+  let second = `${new Date().getSeconds()}`.padStart(2, 0);
+  labelLiveTime.textContent = `${day}, ${date} ${month} ${year}, ${hour}:${minute}:${second}`;
+};
+setInterval(liveTime, 1000);
 
 // EDUCATIONS
 const iterateLists = function(list, arr) {
@@ -423,6 +440,6 @@ const displayCertificates = function(arr) {
 displayCertificates(certifications);
 
 // Sidebar
-sideBar.addEventListener('click', function(event) {
-  console.log(sideBar);
-});
+// sideBar.addEventListener('click', function(event) {
+//   console.log(sideBar);
+// });
