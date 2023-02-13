@@ -53,13 +53,13 @@
     font-size: 1.2rem;
   }
   #about {
-    padding-block: 8rem 6rem;
+    padding-block: 6rem;
   }
   .hero-ryu img {
-    max-width: 160px;
+    max-width: 10rem;
   }
   .hero-ryu h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .hero-ryu .sneak-about {
     font-size: 1.1rem;

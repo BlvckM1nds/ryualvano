@@ -290,7 +290,7 @@ window.addEventListener('scroll', function() {
     };
   };
 
-  if (window.pageYOffset > 100) {
+  if (window.pageYOffset > 75) {
     navHeader.classList.add('head-on-scroll');
     labelCurrDay.textContent = `${greetings(new Date())}`;
   } else {
