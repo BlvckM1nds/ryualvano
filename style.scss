@@ -162,10 +162,15 @@ header {
 	font-family: 'Poppins', sans-serif;
 	height: 75px;
 	background-color: $charcoal;
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	z-index: 99999;
+}
+
+.head-on-scroll {
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, .25);
+	position: fixed;
+	top: 0;
 }
 
 header .container {
@@ -182,7 +187,7 @@ header .container {
 	align-items: center;
     
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-weight: 500;
       margin-left: 12.5px;
     }
@@ -222,7 +227,17 @@ header nav ul {
 	list-style: none;
 }
 
-header .logo-text, footer a {
+header .logo-text {
+	text-decoration: none;
+	color: #fff;
+	transition: .175s;
+
+    &:hover {
+        opacity: .75;
+    }
+}
+
+footer a {
 	text-decoration: none;
 	color: #fff;
 	transition: .2s;
@@ -241,7 +256,7 @@ header .logo-text, footer a {
 // ABOUT
 #about {
 	min-height: 100vh;
-	padding-block: 12rem 10rem;
+	padding-block: 10rem;
 	background-color: $charcoal;
 	text-align: center;
 	display: flex;
@@ -258,15 +273,18 @@ header .logo-text, footer a {
 	}
 	
 	.self-pic {
-		max-width: 20%;
+		max-width: 22.5%;
 		border-radius: 50%;
-		border: 10px solid rgba($white, .25);
+		border: 7px solid rgba($white, .25);
 		box-sizing: content-box;
 		transition: .2s;
 		overflow: hidden;
+		animation: 
+			infinite-blob 30s linear infinite;
 	}
 
 	img:hover {
+		transform: scale(1.05);
 		filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .5));
 	}
 	
@@ -515,20 +533,6 @@ header .logo-text, footer a {
 	margin-top: 6rem;
 }
 
-// ORGANIZATIONS & VOLUNTEERS ORDER
-.fbn-umn {
-	order: 1;
-}
-.alive-medic {
-	order: 2;
-}
-.funsport-si {
-	order: 3;
-}
-.ppbdc {
-	order: 4;
-}
-
 
 // SKILLS
 #skills {
@@ -721,4 +725,39 @@ footer {
 	color: $cadet-grey;
 	text-align: center;
 	padding-block: 2rem;
+}
+
+
+// PICTURE ANIMATION
+@keyframes infinite-blob {
+	0%  { border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%; }
+	5%  { border-radius: 48% 52% 41% 59% / 66% 37% 63% 34%; }
+	10% { border-radius: 69% 31% 71% 29% / 67% 31% 69% 33%; }
+	15% { border-radius: 60% 40% 71% 29% / 63% 65% 35% 37%; }
+	20% { border-radius: 61% 39% 51% 49% / 57% 58% 42% 43%; }
+	25% { border-radius: 66% 34% 25% 75% / 47% 30% 70% 53%; }
+	30% { border-radius: 32% 68% 38% 62% / 65% 60% 40% 35%; }
+	35% { border-radius: 63% 37% 41% 59% / 35% 38% 62% 65%; }
+	40% { border-radius: 57% 43% 49% 51% / 55% 71% 29% 45%; }
+	45% { border-radius: 47% 53% 34% 66% / 65% 36% 64% 35%; }
+	50% { border-radius: 44% 56% 32% 68% / 69% 26% 74% 31%; }
+	55% { border-radius: 28% 72% 37% 63% / 71% 44% 56% 29%; }    
+	60% { border-radius: 38% 62% 35% 65% / 74% 53% 47% 26%; }
+	65% { border-radius: 73% 27% 46% 54% / 54% 47% 53% 46%; }
+	70% { border-radius: 75% 25% 47% 53% / 49% 53% 47% 51%; }
+	75% { border-radius: 62% 38% 43% 57% / 55% 60% 40% 45%; }
+	80% { border-radius: 41% 59% 65% 35% / 73% 50% 50% 27%; }
+	85% { border-radius: 55% 45% 57% 43% / 73% 61% 39% 27%; }
+	90% { border-radius: 74% 26% 33% 67% / 40% 65% 35% 60%; }
+	95% { border-radius: 58% 42% 57% 43% / 53% 45% 55% 47%; }
+	100%{ border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%; }
+}
+
+@keyframes infinite-wobb {
+	0%  {
+			transform: rotateZ(8deg);
+	}
+	100% {
+			transform: rotateZ(-8deg);
+	}
 }

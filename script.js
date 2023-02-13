@@ -45,8 +45,8 @@ const workExperiences = {
     type: 'Internship',
     activities: [
       'Created interactive dashboards of Daihatsu brand credit approval within a certain period of time using Tableau.',
-      'Be able to produced stored procedural functions for daily data preparation with SQL.',
-      'Performed daily data analysis on Daihatsu direct-selling credit validity.',
+      'Be able to produced stored procedural functions for daily data preparation with SQL.', 
+      'Performed daily data analysis on Daihatsu direct & indirect-selling credit validity.',
       'Introduced and learned about the business process especially in the scope of leasing company.'
     ],
     date: 'February 2023 - present'
@@ -224,7 +224,9 @@ const certifications = [
 
 // html docs
 const sideBar = document.querySelector('.nav-three-bars');
+const navHeader = document.querySelector('.nav-header');
 const labelLiveTime = document.querySelector('.live-time');
+const labelCurrDay = document.querySelector('.curr-day');
 
 const umnRelevantLists = document.querySelector('.umn-relevant-lists');
 const umnActivityLists = document.querySelector('.umn-activity-lists');
@@ -265,6 +267,37 @@ const liveTime = function() {
   labelLiveTime.textContent = `${day}, ${date} ${month} ${year}, ${hour}:${minute}:${second}`;
 };
 setInterval(liveTime, 1000);
+
+// Current Day
+const setCurrDay = function(date) {
+  const allDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const indexDay = date.getDay();
+  labelCurrDay.textContent = `Happy ${allDays[indexDay]}!`;
+};
+setCurrDay(new Date());
+
+// Header on scroll
+window.addEventListener('scroll', function() {
+  function greetings(date) {
+    if (date.getHours() < 12 && date.getHours() >= 5) {
+      return 'Good Morning!';
+    } else if (date.getHours() < 18 && date.getHours() >= 12) {
+      return 'Good Afternoon!';
+    } else if (date.getHours() < 22 && date.getHours() >= 18) {
+      return 'Good Evening!';
+    } else {
+      return 'Good Night!';
+    };
+  };
+
+  if (window.pageYOffset > 100) {
+    navHeader.classList.add('head-on-scroll');
+    labelCurrDay.textContent = `${greetings(new Date())}`;
+  } else {
+    navHeader.classList.remove('head-on-scroll');
+    setCurrDay(new Date());
+  };
+});
 
 // EDUCATIONS
 const iterateLists = function(list, arr) {
