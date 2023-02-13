@@ -272,7 +272,7 @@ setInterval(liveTime, 1000);
 const setCurrDay = function(date) {
   const allDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const indexDay = date.getDay();
-  labelCurrDay.textContent = `Happy ${allDays[indexDay]}!`;
+  labelCurrDay.textContent = `Happy ${allDays[indexDay]} !`;
 };
 setCurrDay(new Date());
 
@@ -280,17 +280,17 @@ setCurrDay(new Date());
 window.addEventListener('scroll', function() {
   function greetings(date) {
     if (date.getHours() < 12 && date.getHours() >= 5) {
-      return 'Good Morning!';
+      return 'Good Morning !';
     } else if (date.getHours() < 18 && date.getHours() >= 12) {
-      return 'Good Afternoon!';
+      return 'Good Afternoon !';
     } else if (date.getHours() < 22 && date.getHours() >= 18) {
-      return 'Good Evening!';
+      return 'Good Evening !';
     } else {
-      return 'Good Night!';
+      return 'Good Night !';
     };
   };
 
-  if (window.pageYOffset > 75) {
+  if (window.scrollY > window.innerHeight) {
     navHeader.classList.add('head-on-scroll');
     labelCurrDay.textContent = `${greetings(new Date())}`;
   } else {

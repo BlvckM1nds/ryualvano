@@ -59,7 +59,7 @@
     max-width: 10rem;
   }
   .hero-ryu h1 {
-    font-size: 4rem;
+    font-size: 3.75rem;
   }
   .hero-ryu .sneak-about {
     font-size: 1.1rem;
@@ -122,5 +122,10 @@
   }
   .intro-ryu-footer h2 {
     line-height: 1.15;
+  }
+}
+@media screen and (max-width: 640px) {
+  .intro-foot-infos br {
+    display: none;
   }
 }/*# sourceMappingURL=responsive.css.map */
