@@ -157,6 +157,8 @@ table {
   font-family: "Poppins", sans-serif;
   height: 75px;
   background-color: #283e4a;
+  position: fixed;
+  top: 0;
   width: 100%;
   z-index: 99999;
   transition: 0.5s;
@@ -166,8 +168,7 @@ table {
   backdrop-filter: blur(3px);
   background-color: rgba(40, 62, 74, 0.8);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 0;
+  position: fixed;
 }
 
 header .container {
