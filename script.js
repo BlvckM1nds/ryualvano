@@ -225,6 +225,8 @@ const certifications = [
 // html docs
 const sideBar = document.querySelector('.nav-three-bars');
 const navHeader = document.querySelector('.nav-header');
+const rightNavigations = document.querySelector('.navigations');
+const navThreeBars = document.querySelector('.nav-three-bars');
 const labelLiveTime = document.querySelector('.live-time');
 const labelCurrDay = document.querySelector('.curr-day');
 
@@ -297,10 +299,22 @@ window.addEventListener('scroll', function() {
 
   if (window.scrollY > window.innerHeight) {
     navHeader.classList.add('head-on-scroll');
+
     labelCurrDay.textContent = `${greetings(new Date())}`;
+    labelCurrDay.classList.add('nav-text-on-scroll');
+    rightNavigations.classList.add('nav-ul-on-scroll');
+    navThreeBars.style.color = '#283e4a';
+    
+    document.getElementById('header-logo').src = 'img/logo-ryu-charcoal.png';
   } else {
     navHeader.classList.remove('head-on-scroll');
+    labelCurrDay.classList.remove('nav-text-on-scroll');
+    rightNavigations.classList.remove('nav-ul-on-scroll');
+    navThreeBars.style.color = '#fff';
+
     setCurrDay(new Date());
+
+    document.getElementById('header-logo').src = 'img/logo-ryu.png'
   };
 });
 

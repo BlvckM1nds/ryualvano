@@ -26,6 +26,10 @@
   .header-contents .nav-three-bars {
       display: initial;
       font-size: 32px;
+
+      & .nav-ul-on-scroll {
+        color: $charcoal;
+      }
   }
   .header-contents .sneak-about {
       font-size: 1rem;

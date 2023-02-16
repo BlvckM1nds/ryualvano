@@ -166,8 +166,8 @@ table {
 
 .head-on-scroll {
   backdrop-filter: blur(3px);
-  background-color: rgba(40, 62, 74, 0.8);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(229, 231, 233, 0.75);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.125);
   position: fixed;
 }
 
@@ -213,8 +213,17 @@ header nav a {
   transition: 0.25s;
 }
 
+header nav .nav-ul-on-scroll a {
+  color: #283e4a;
+}
+
 header ul:hover a:not(:hover) {
   color: #fff;
+  opacity: 0.3;
+}
+
+header .nav-ul-on-scroll:hover a:not(:hover) {
+  color: #283e4a;
   opacity: 0.3;
 }
 
@@ -231,6 +240,10 @@ header .logo-text {
 }
 header .logo-text:hover {
   opacity: 0.75;
+}
+
+.nav-text-on-scroll {
+  color: #283e4a;
 }
 
 footer a {

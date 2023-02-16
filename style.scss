@@ -173,8 +173,8 @@ table {
 
 .head-on-scroll {
 	backdrop-filter: blur(3px);
-	background-color: rgba(40, 62, 74, .8);
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, .2);
+	background-color: rgba(229, 231, 233, 0.75);
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, .125);
 	position: fixed;
 }
 
@@ -190,16 +190,16 @@ header .container {
 .profile-logo {
 	display: flex;
 	align-items: center;
-    
-    h1 {
-      font-size: 1.15rem;
+	
+	h1 {
+		font-size: 1.15rem;
       font-weight: 500;
       margin-left: 12.5px;
     }
-}
-
-header .nav-three-bars {
-	display: none;
+	}
+	
+	header .nav-three-bars {
+		display: none;
 }
 
 .nav-three-bars:active,
@@ -210,7 +210,7 @@ header .nav-three-bars {
 }
 
 header nav {
-  display: flex;
+	display: flex;
   gap: 1.5rem;
 }
 
@@ -221,13 +221,22 @@ header nav a {
   transition: .25s;
 }
 
+header nav .nav-ul-on-scroll a {
+  color: $charcoal;
+}
+
 header ul:hover a:not(:hover) {
-  color: #fff;
+	color: #fff;
+  opacity: .3;
+}
+
+header .nav-ul-on-scroll:hover a:not(:hover) {
+	color: $charcoal;
   opacity: .3;
 }
 
 header nav ul {
-  display: flex;
+	display: flex;
   gap: 1.5rem;
 	list-style: none;
 }
@@ -236,10 +245,14 @@ header .logo-text {
 	text-decoration: none;
 	color: #fff;
 	transition: .175s;
-
-    &:hover {
+	
+	&:hover {
         opacity: .75;
     }
+}
+
+.nav-text-on-scroll {
+	color: $charcoal;
 }
 
 footer a {
