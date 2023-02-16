@@ -255,25 +255,25 @@ const certifContainer = document.querySelector('.cont-certif');
 const certifLists = document.querySelector('.certif-lists');
 
 // FOOTER LIVE-TIME
-const showLiveTime = function() {
-  const liveTime = function() {
-    // day
-    let day = new Date().toLocaleDateString(['en'], { weekday: "long" });
-    let date = new Date().getDate();
-    let month = new Date().toLocaleString('en', { month: "long" });
-    let year = new Date().getFullYear();
-    
-    // time
-    let hour = `${new Date().getHours()}`.padStart(2, 0);
-    let minute = `${new Date().getMinutes()}`.padStart(2, 0);
-    let second = `${new Date().getSeconds()}`.padStart(2, 0);
-    labelLiveTime.textContent = `${day}, ${date} ${month} ${year}, ${hour}:${minute}:${second}`;
-  };
+const liveTime = function() {
+  // day
+  let day = new Date().toLocaleDateString(['en'], { weekday: "long" });
+  let date = new Date().getDate();
+  let month = new Date().toLocaleString('en', { month: "long" });
+  let year = new Date().getFullYear();
+  
+  // time
+  let hour = `${new Date().getHours()}`.padStart(2, 0);
+  let minute = `${new Date().getMinutes()}`.padStart(2, 0);
+  let second = `${new Date().getSeconds()}`.padStart(2, 0);
+  labelLiveTime.textContent = `${day}, ${date} ${month} ${year}, ${hour}:${minute}:${second}`;
+};
 
+const printLiveTime = function() {
   liveTime();
   setInterval(liveTime, 1000);
 };
-showLiveTime();
+printLiveTime();
 
 // Current Day
 const setCurrDay = function(date) {
@@ -296,12 +296,13 @@ window.addEventListener('scroll', function() {
       return 'Good Night !';
     };
   };
-
+  
   if (window.scrollY > window.innerHeight) {
     navHeader.classList.add('head-on-scroll');
-
+    
     labelCurrDay.textContent = `${greetings(new Date())}`;
     labelCurrDay.classList.add('nav-text-on-scroll');
+
     rightNavigations.classList.add('nav-ul-on-scroll');
     navThreeBars.style.color = '#283e4a';
     
@@ -309,12 +310,13 @@ window.addEventListener('scroll', function() {
   } else {
     navHeader.classList.remove('head-on-scroll');
     labelCurrDay.classList.remove('nav-text-on-scroll');
+
     rightNavigations.classList.remove('nav-ul-on-scroll');
     navThreeBars.style.color = '#fff';
 
     setCurrDay(new Date());
 
-    document.getElementById('header-logo').src = 'img/logo-ryu.png'
+    document.getElementById('header-logo').src = 'img/logo-ryu.png';
   };
 });
 
