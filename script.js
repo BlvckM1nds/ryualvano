@@ -253,20 +253,25 @@ const certifContainer = document.querySelector('.cont-certif');
 const certifLists = document.querySelector('.certif-lists');
 
 // FOOTER LIVE-TIME
-const liveTime = function() {
-  // day
-  let day = new Date().toLocaleDateString(['en'], { weekday: "long" });
-  let date = new Date().getDate();
-  let month = new Date().toLocaleString('en', { month: "long" });
-  let year = new Date().getFullYear();
-  
-  // time
-  let hour = `${new Date().getHours()}`.padStart(2, 0);
-  let minute = `${new Date().getMinutes()}`.padStart(2, 0);
-  let second = `${new Date().getSeconds()}`.padStart(2, 0);
-  labelLiveTime.textContent = `${day}, ${date} ${month} ${year}, ${hour}:${minute}:${second}`;
+const showLiveTime = function() {
+  const liveTime = function() {
+    // day
+    let day = new Date().toLocaleDateString(['en'], { weekday: "long" });
+    let date = new Date().getDate();
+    let month = new Date().toLocaleString('en', { month: "long" });
+    let year = new Date().getFullYear();
+    
+    // time
+    let hour = `${new Date().getHours()}`.padStart(2, 0);
+    let minute = `${new Date().getMinutes()}`.padStart(2, 0);
+    let second = `${new Date().getSeconds()}`.padStart(2, 0);
+    labelLiveTime.textContent = `${day}, ${date} ${month} ${year}, ${hour}:${minute}:${second}`;
+  };
+
+  liveTime();
+  setInterval(liveTime, 1000);
 };
-setInterval(liveTime, 1000);
+showLiveTime();
 
 // Current Day
 const setCurrDay = function(date) {
