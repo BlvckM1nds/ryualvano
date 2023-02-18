@@ -71,6 +71,33 @@ table {
 
 /* --------------------------------------------------------- */
 
+.arrow-up {
+	cursor: pointer;
+	position: fixed;
+	z-index: 9999;
+	background-color: $charcoal;
+	color: white;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 1.35em;
+	bottom: 5%;
+	left: 5%;
+	width: 2.5rem;
+	aspect-ratio: 1 / 1;
+	border: 1.5px solid rgba(40, 62, 74, .5);
+	box-shadow: 0px 0px 5px rgba(140, 140, 140, .25);
+	// display: none;
+	visibility: hidden;
+	opacity: 0;
+	transition: .5s;
+
+	.fa-arrow-up {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
 // WhatsApp
 .whatsapp {
 	position: fixed;
@@ -157,6 +184,11 @@ table {
 	}
 }
 
+.side-on-scroll {
+	background-color: $charcoal;
+	color: white;
+}
+
 
 /* header */
 .nav-header {
@@ -167,15 +199,14 @@ table {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 99999;
+	z-index: 999;
 	transition: .5s;
 }
 
 .head-on-scroll {
 	backdrop-filter: blur(3px);
 	background-color: rgba(229, 231, 233, 0.75);
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, .125);
-	position: fixed;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, .25);
 }
 
 header .container {

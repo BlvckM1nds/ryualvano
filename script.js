@@ -229,6 +229,8 @@ const rightNavigations = document.querySelector('.navigations');
 const navThreeBars = document.querySelector('.nav-three-bars');
 const labelLiveTime = document.querySelector('.live-time');
 const labelCurrDay = document.querySelector('.curr-day');
+const sideContacts = document.querySelectorAll('.side-contact');
+const sideArrowUp = document.querySelector('.arrow-up');
 
 const umnRelevantLists = document.querySelector('.umn-relevant-lists');
 const umnActivityLists = document.querySelector('.umn-activity-lists');
@@ -305,15 +307,21 @@ window.addEventListener('scroll', function() {
 
     rightNavigations.classList.add('nav-ul-on-scroll');
     navThreeBars.style.color = '#283e4a';
+
+    sideContacts.forEach(element => element.classList.add('side-on-scroll'));
+    sideArrowUp.classList.add('show-arrow');
     
     document.getElementById('header-logo').src = 'img/logo-ryu-charcoal.png';
   } else {
     navHeader.classList.remove('head-on-scroll');
     labelCurrDay.classList.remove('nav-text-on-scroll');
-
+    
     rightNavigations.classList.remove('nav-ul-on-scroll');
     navThreeBars.style.color = '#fff';
-
+    
+    sideContacts.forEach(element => element.classList.remove('side-on-scroll'));
+    sideArrowUp.classList.remove('show-arrow');
+    
     setCurrDay(new Date());
 
     document.getElementById('header-logo').src = 'img/logo-ryu.png';
