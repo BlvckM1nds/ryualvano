@@ -28,7 +28,6 @@ footer, header, hgroup, menu, nav, section {
 
 html {
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 body {

@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 html {
 	overflow-x: hidden;
-	scroll-behavior: smooth;
+	// scroll-behavior: smooth;
 	// background-color: $charcoal;
 }
 body {
@@ -278,8 +278,8 @@ header .logo-text {
 	transition: .175s;
 	
 	&:hover {
-        opacity: .75;
-    }
+		opacity: .75;
+	}
 }
 
 .nav-text-on-scroll {

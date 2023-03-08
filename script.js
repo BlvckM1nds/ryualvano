@@ -285,6 +285,18 @@ const setCurrDay = function(date) {
 };
 setCurrDay(new Date());
 
+// Navigations scroll
+navHeader.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains('nav-link')) {
+    const sectionId = e.target.getAttribute('href').slice(1);
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+  } else if (e.target.classList.contains('curr-day') || e.target.getAttribute('id') === 'header-logo') {
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+  };
+});
+
 // Header on scroll
 window.addEventListener('scroll', function() {
   function greetings(date) {
