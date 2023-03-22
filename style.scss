@@ -301,6 +301,16 @@ footer a {
 	box-sizing: border-box;
 }
 
+.container-page {
+	opacity: 1;
+	transition: 1s;
+}
+
+.cont-hidden {
+	opacity: 0;
+	transform: translateY(8rem);
+}
+
 
 // ABOUT
 #about {

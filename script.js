@@ -256,6 +256,8 @@ const certifTitle = document.querySelector('.title-certif-exp');
 const certifContainer = document.querySelector('.cont-certif');
 const certifLists = document.querySelector('.certif-lists');
 
+
+// ---------------------------------------------------------------------
 // FOOTER LIVE-TIME
 const liveTime = function() {
   // day
@@ -276,7 +278,10 @@ const printLiveTime = function() {
   setInterval(liveTime, 1000);
 };
 printLiveTime();
+// ---------------------------------------------------------------------
 
+
+// ---------------------------------------------------------------------
 // Current Day
 const setCurrDay = function(date) {
   const allDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -284,7 +289,11 @@ const setCurrDay = function(date) {
   labelCurrDay.textContent = `Happy ${allDays[indexDay]} !`;
 };
 setCurrDay(new Date());
+// ---------------------------------------------------------------------
 
+
+
+// ---------------------------------------------------------------------
 // Navigations scroll
 navHeader.addEventListener('click', function(e) {
   e.preventDefault();
@@ -296,7 +305,10 @@ navHeader.addEventListener('click', function(e) {
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
   };
 });
+// ---------------------------------------------------------------------
 
+
+// ---------------------------------------------------------------------
 // Header on scroll
 window.addEventListener('scroll', function() {
   function greetings(date) {
@@ -339,7 +351,33 @@ window.addEventListener('scroll', function() {
     document.getElementById('header-logo').src = 'img/logo-ryu.png';
   };
 });
+// ---------------------------------------------------------------------
 
+
+// ---------------------------------------------------------------------
+// Show up hidden container
+const allContainers = document.querySelectorAll('.container-page');
+const fadeInCallback = function(entries, observer) {
+  const [entry] = entries;
+  // console.log(entry.target);
+
+  if (!entry.isIntersecting) return;
+
+  entry.isIntersecting && entry.target.classList.remove('cont-hidden');
+  observer.unobserve(entry.target);
+};
+
+const contObserver = new IntersectionObserver(fadeInCallback, {
+  root: null,
+  threshold: 0
+});
+
+allContainers.forEach(cont => {
+  contObserver.observe(cont);
+});
+// ---------------------------------------------------------------------
+
+// ---------------------------------------------------------------------
 // EDUCATIONS
 const iterateLists = function(list, arr) {
   arr.forEach(value => {
@@ -413,8 +451,10 @@ const displayDetailBPK = function(obj) {
   // });
 };
 displayDetailBPK(ryuBPK);
+// ---------------------------------------------------------------------
 
 
+// ---------------------------------------------------------------------
 // WORK EXPERIENCES
 const displayExps = function(work, orgs) {
   const workExps = Object.values(work);
@@ -512,6 +552,8 @@ const displayCertificates = function(arr) {
   });
 };
 displayCertificates(certifications);
+// ---------------------------------------------------------------------
+
 
 // Sidebar
 // sideBar.addEventListener('click', function(event) {
