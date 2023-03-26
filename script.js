@@ -8,7 +8,7 @@ const ryuUMN = {
   degree: "Bachelor's Degree, Information System",
   institution: 'Universitas Multimedia Nusantara',
   courses: [
-    'Web Design and Development: Accomplished the final group project of this course by designing the “Newssissippi” website and took a part on the user interface side with HTML and CSS.',
+    'Web Design and Development: Accomplished the final group project of this course by designing the “Newssissippi” website and took a part on the user interface side with HTML, CSS, and Javascript.',
     'Human and Computer Interaction: Designed the UI/UX display of the “Skrinol” (COVID-19 vaccination online screening application) with Figma.',
     'Database Development: Devised and built a database including entity relationship diagram, table normalization, query writing, and implemented DDL and DML with SQL.',
     'Data Visualization: Transformed weekly data sets into compelling visuals using Tableau.'
@@ -45,7 +45,7 @@ const workExperiences = {
     type: 'Internship',
     activities: [
       'Created interactive dashboards of Daihatsu brand credit approval within a certain period of time using Tableau.',
-      'Be able to produced stored procedural functions for daily data preparation with SQL.', 
+      'Developed stored procedural functions for daily data preparation with SQL.', 
       'Performed daily data analysis on Daihatsu direct & indirect-selling credit validity.',
       'Introduced and learned about the business process especially in the scope of leasing company.'
     ],
@@ -225,6 +225,7 @@ const certifications = [
 // html docs
 const sideBar = document.querySelector('.nav-three-bars');
 const navHeader = document.querySelector('.nav-header');
+const navFooter = document.querySelector('.nav-ryu-foot');
 const rightNavigations = document.querySelector('.navigations');
 const navThreeBars = document.querySelector('.nav-three-bars');
 const labelLiveTime = document.querySelector('.live-time');
@@ -295,22 +296,44 @@ setCurrDay(new Date());
 
 // ---------------------------------------------------------------------
 // Navigations scroll
-navHeader.addEventListener('click', function(e) {
-  e.preventDefault();
+// navHeader.addEventListener('click', function(e) {
+//   e.preventDefault();
 
-  if (e.target.classList.contains('nav-link')) {
-    const sectionId = e.target.getAttribute('href').slice(1);
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-  } else if (e.target.classList.contains('curr-day') || e.target.getAttribute('id') === 'header-logo') {
-    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-  };
-});
+//   if (e.target.classList.contains('nav-link')) {
+//     const sectionId = e.target.getAttribute('href').slice(1);
+//     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+//   } else if (e.target.classList.contains('curr-day') || e.target.getAttribute('id') === 'header-logo') {
+//     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+//   };
+// });
 // ---------------------------------------------------------------------
 
+
+// ---------------------------------------------------------------------
+// Footer scroll
+const anchorScroll = (e) => {
+  e.preventDefault();
+  const sectionId = e.target.getAttribute('href') && e.target.getAttribute('href').slice(1);
+
+  if (e.target.classList.contains('nav-link')) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+  } else if (e.target.classList.contains('curr-day') || e.target.getAttribute('id') === 'header-logo') {
+    document.getElementById('about').scrollIntoView({ behavior: "smooth" });
+  } else {
+    return;
+  }
+};
+
+navHeader.addEventListener('click', anchorScroll);
+navFooter.addEventListener('click', anchorScroll);
 
 // ---------------------------------------------------------------------
 // Header on scroll
-window.addEventListener('scroll', function() {
+const aboutSection = document.getElementById('about');
+const navHeaderHeight = navHeader.getBoundingClientRect().height;
+const headerScrollCallback = function(entries, observer) {
+  const [entry] = entries;
+
   function greetings(date) {
     if (date.getHours() < 12 && date.getHours() >= 5) {
       return 'Good Morning !';
@@ -323,7 +346,7 @@ window.addEventListener('scroll', function() {
     };
   };
   
-  if (window.scrollY > window.innerHeight) {
+  if (!entry.isIntersecting) {
     navHeader.classList.add('head-on-scroll');
     
     labelCurrDay.textContent = `${greetings(new Date())}`;
@@ -335,7 +358,7 @@ window.addEventListener('scroll', function() {
     sideContacts.forEach(element => element.classList.add('side-on-scroll'));
     sideArrowUp.classList.add('show-arrow');
     
-    document.getElementById('header-logo').src = 'img/logo-ryu-charcoal.png';
+    document.getElementById('header-logo').src = 'img/logo-ryu-navy.png';
   } else {
     navHeader.classList.remove('head-on-scroll');
     labelCurrDay.classList.remove('nav-text-on-scroll');
@@ -348,9 +371,58 @@ window.addEventListener('scroll', function() {
     
     setCurrDay(new Date());
 
-    document.getElementById('header-logo').src = 'img/logo-ryu.png';
+    document.getElementById('header-logo').src = 'img/logo-ryu-white.png';
   };
+};
+
+const aboutObserver = new IntersectionObserver(headerScrollCallback, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeaderHeight}px`
 });
+aboutObserver.observe(aboutSection);
+
+// window.addEventListener('scroll', function() {
+//   function greetings(date) {
+//     if (date.getHours() < 12 && date.getHours() >= 5) {
+//       return 'Good Morning !';
+//     } else if (date.getHours() < 18 && date.getHours() >= 12) {
+//       return 'Good Afternoon !';
+//     } else if (date.getHours() < 22 && date.getHours() >= 18) {
+//       return 'Good Evening !';
+//     } else {
+//       return 'Good Night !';
+//     };
+//   };
+  
+//   if (window.scrollY > window.innerHeight) {
+//     navHeader.classList.add('head-on-scroll');
+    
+//     labelCurrDay.textContent = `${greetings(new Date())}`;
+//     labelCurrDay.classList.add('nav-text-on-scroll');
+
+//     rightNavigations.classList.add('nav-ul-on-scroll');
+//     navThreeBars.style.color = '#283e4a';
+
+//     sideContacts.forEach(element => element.classList.add('side-on-scroll'));
+//     sideArrowUp.classList.add('show-arrow');
+    
+//     document.getElementById('header-logo').src = 'img/logo-ryu-charcoal.png';
+//   } else {
+//     navHeader.classList.remove('head-on-scroll');
+//     labelCurrDay.classList.remove('nav-text-on-scroll');
+    
+//     rightNavigations.classList.remove('nav-ul-on-scroll');
+//     navThreeBars.style.color = '#fff';
+    
+//     sideContacts.forEach(element => element.classList.remove('side-on-scroll'));
+//     sideArrowUp.classList.remove('show-arrow');
+    
+//     setCurrDay(new Date());
+
+//     document.getElementById('header-logo').src = 'img/logo-ryu.png';
+//   };
+// });
 // ---------------------------------------------------------------------
 
 
@@ -369,7 +441,7 @@ const fadeInCallback = function(entries, observer) {
 
 const contObserver = new IntersectionObserver(fadeInCallback, {
   root: null,
-  threshold: 0
+  threshold: .1
 });
 
 allContainers.forEach(cont => {
