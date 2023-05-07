@@ -5,7 +5,7 @@ document.querySelector('.footer-year').textContent = new Date().getFullYear();
 
 // Educations
 const ryuUMN = {
-  degree: "Bachelor's Degree, Information System",
+  degree: "Bachelor's Degree, Information Systems",
   institution: 'Universitas Multimedia Nusantara',
   courses: [
     'Web Design and Development: Accomplished the final group project of this course by designing the “Newssissippi” website and took a part on the user interface side with HTML, CSS, and Javascript.',
@@ -18,7 +18,7 @@ const ryuUMN = {
     'Graphic designer of ALIVE 8.0 (UMN Medical Center annual event).',
     'Event staff of Funsport SI 2022 under the auspices of HIMSI.'
   ],
-  awards: ['Finalist (Top 12) of Indonesian Capital Market Festival (ICMF) 2022 Fund Managing Competition.'],
+  awards: ['Finalist (Top 9) of Indonesian Capital Market Festival (ICMF) 2022 Fund Managing Competition.'],
   date: 'August 2020 - present'
 };
 
@@ -44,10 +44,10 @@ const workExperiences = {
     company: 'Astra Credit Companies',
     type: 'Internship',
     activities: [
-      'Created interactive dashboards of Daihatsu brand credit approval within a certain period of time using Tableau.',
-      'Developed stored procedural functions for daily data preparation with SQL.', 
-      'Performed daily data analysis on Daihatsu direct & indirect-selling credit validity.',
-      'Introduced and learned about the business process especially in the scope of leasing company.'
+      "Created real-time interactive dashboards of Daihatsu's daily raw data, outstanding account receivable, and weekly B2B performance using Looker Studio (also known as Google Data Studio) and Tableau.",
+      "Performed a strong analysis of a vast amount of daily Daihatsu’s direct-selling & indirect-selling data.",
+      "Improved the efficiency of daily data preparation with SQL procedures, functions, and views.",
+      "Introduced and learned about the business process especially in the scope of leasing company."
     ],
     date: 'February 2023 - present'
   },
@@ -57,11 +57,10 @@ const workExperiences = {
     company: 'Nuwo Medical Store',
     type: 'Self-employed',
     activities: [
-      'Carry out active promotions on social media and making monthly financial report of sales.',
-      'Actively provide daily services to customers.',
-      'Responsible for packaging and shipping products to consumers throughout Indonesia.',
-      'Built a partnership with some of the suppliers in and out of the city.',
-      'Designed and developed high quality visual concepts on Instagram (@nuwo_medstore) to strengthen the brand image.',
+      'Actively provide end-to-end services to customers.',
+      'Responsible for packaging and shipping products to customers throughout Indonesia.',
+      'Built a partnership with 10+ suppliers and distributors in and out of the town.',
+      'Created high-quality visual designs on Instagram with the purpose to strengthen the brand image.',
       'Developing a website-based landing page.'
     ],
     date: 'June 2021 - present'
@@ -72,8 +71,9 @@ const workExperiences = {
     company: 'Seeds',
     type: 'Internship',
     activities: [
-      'Fixed some of the minor bugs found by QA team on the company landing page.',
-      'Implemented the user interface using existing component (UI slicing from Figma design).',
+      'Fixed some of the minor bugs found by the QA team on the company landing page using ReactJS as the framework.',
+      'Implemented the user interface using existing components (UI slicing from Figma design) with Tailwind CSS.',
+      'Maintained the web page functionality by keeping the local branch in line with the main Git branch.',
       'Given an overview of how a frontend web developer works especially with libraries and frameworks.'
     ],
     date: 'November 2022 - December 2022'
