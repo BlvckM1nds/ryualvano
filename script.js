@@ -210,10 +210,6 @@ const orgsExperiences = {
 // Certifications
 const certifications = [
   ['Vocasia+Intermediate Excel Training for Professional Employees & Jobseekers+2022+https://vocasia.id/user/get_certificate/80/13448'],
-  ['Progate+Fundamental of SQL+2022+https://progate.com/course_certificate/8555e28arkm1da'],
-  ['Progate+Fundamental of HTML & CSS+2022+https://progate.com/course_certificate/ebe53770rkf2q5'],
-  ['Progate+Fundamental of Sass+2022+https://progate.com/course_certificate/5ded921crku32s'],
-  ['Progate+Fundamental of Java+2022+https://progate.com/course_certificate/b1c207b7rku0sa'],
   ['Udemy+Build Responsive Real-World Websites with HTML and CSS+2022+https://www.udemy.com/certificate/UC-31af5594-c03e-42fd-b468-e51340c379ed/'],
   ['EF Standard English Test (EF SET)+EF SET English Certificate 64/100 (C1 Advanced)+2022+https://www.efset.org/cert/XAWdKJ'],
   ['SanberCode+Bootcamp ReactJS Web Frontend+2022+https://sanbercode.com/sertifikat/generate/6240c30e-4e01-4c5e-87c1-ab0c2b9f708f'],
