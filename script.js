@@ -259,8 +259,8 @@ const displayExps = function(work, orgs) {
   const workExps = Object.values(work);
   const orgsExps = Object.values(orgs);
   // console.log(exps);
-  console.log(workExps);
-  console.log(orgsExps);
+  // console.log(workExps);
+  // console.log(orgsExps);
 
   // Work Experiences
   workExps.reverse().forEach((workExp, i, arr) => {
@@ -336,8 +336,6 @@ const displayExps = function(work, orgs) {
 displayExps(workExperiences, orgsExperiences);
 
 const displayCertificates = function(arr) {
-  console.log(arr);
-
   arr.forEach(certif => {
     const certifDetail = certif.toString().split('+');
     const [ issuer, name, year, credential ] = certifDetail;
