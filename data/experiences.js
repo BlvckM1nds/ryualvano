@@ -8,7 +8,7 @@ const work = {
     activities: [
       "Created real-time interactive dashboards of Daihatsu's daily raw data, outstanding account receivable, and weekly B2B performance using Looker Studio (also known as Google Data Studio) and Tableau.",
       "Performed a strong analysis of a vast amount of daily Daihatsu’s direct-selling & indirect-selling data.",
-      "Improved the efficiency of daily data preparation with SQL procedures, functions, and views.",
+      "Improved the efficiency of daily data preparation with SQL utilization.",
       "Introduced and learned about the business process especially in the scope of leasing company."
     ],
     date: 'February 2023 - present'
