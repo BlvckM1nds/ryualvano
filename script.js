@@ -206,24 +206,6 @@ const displayDetailUMN = function(obj) {
   iterateLists(umnRelevantLists, courses);
   iterateLists(umnActivityLists, activities);
   iterateLists(umnAwardLists, awards);
-  
-  // courses.forEach(course => {
-  //   const html = `<li class="edu-list">• ${course}</li>`;
-
-  //   umnRelevantLists.insertAdjacentHTML('beforeend', html);
-  // });
-
-  // activities.forEach(activity => {
-  //   const html = `<li class="edu-list">• ${activity}</li>`;
-
-  //   umnActivityLists.insertAdjacentHTML('beforeend', html);
-  // });
-
-  // awards.forEach(award => {
-  //   const html = `<li class="edu-list">• ${award}</li>`;
-
-  //   umnAwardLists.insertAdjacentHTML('beforeend', html);
-  // });
 };
 displayDetailUMN(ryuUMN);
 
@@ -242,12 +224,6 @@ const displayDetailBPK = function(obj) {
   labelDateBPK.textContent = date;
 
   iterateLists(bpkActivityLists, activities);
-  
-  // activities.forEach(activity => {
-  //   const html = `<li class="edu-list">• ${activity}</li>`;
-
-  //   bpkActivityLists.insertAdjacentHTML('beforeend', html);
-  // });
 };
 displayDetailBPK(ryuBPK);
 // ---------------------------------------------------------------------
@@ -258,9 +234,6 @@ displayDetailBPK(ryuBPK);
 const displayExps = function(work, orgs) {
   const workExps = Object.values(work);
   const orgsExps = Object.values(orgs);
-  // console.log(exps);
-  // console.log(workExps);
-  // console.log(orgsExps);
 
   // Work Experiences
   workExps.reverse().forEach((workExp, i, arr) => {
@@ -278,7 +251,6 @@ const displayExps = function(work, orgs) {
       const li = `<li class="exps">• ${act}</li>`;
       activityLists += li;
     });
-    // console.log(activityLists);
 
     const html = `
       <div class="detail experience-detail">
@@ -293,9 +265,9 @@ const displayExps = function(work, orgs) {
           <p>${date}</p>
         </div>
       </div>
-    `
+    `;
 
-    workTitle.insertAdjacentHTML('afterend', html)
+    workTitle.insertAdjacentHTML('afterend', html);
   });
 
   // Organitazion Experiences

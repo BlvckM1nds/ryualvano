@@ -1,18 +1,5 @@
 // Work Exps Details
 const work = {
-  acc: {
-    uniqueCode: 'acc',
-    role: 'Data Analyst',
-    company: 'Astra Credit Companies',
-    type: 'Internship',
-    activities: [
-      "Created real-time interactive dashboards of Daihatsu's daily raw data, outstanding account receivable, and weekly B2B performance using Looker Studio (also known as Google Data Studio) and Tableau.",
-      "Performed a strong analysis of a vast amount of daily Daihatsu’s direct-selling & indirect-selling data.",
-      "Improved the efficiency of daily data preparation with SQL utilization.",
-      "Introduced and learned about the business process especially in the scope of leasing company."
-    ],
-    date: 'February 2023 - present'
-  },
   nuwo: {
     uniqueCode: 'nuwo',
     role: 'Ecommerce Business Owner',
@@ -26,6 +13,19 @@ const work = {
       'Developing a website-based landing page.'
     ],
     date: 'June 2021 - present'
+  },
+  acc: {
+    uniqueCode: 'acc',
+    role: 'Data Analyst',
+    company: 'Astra Credit Companies',
+    type: 'Internship',
+    activities: [
+      "Created real-time interactive dashboards of Daihatsu's daily raw data, outstanding account receivable, and weekly B2B performance using Looker Studio (also known as Google Data Studio) and Tableau.",
+      "Performed a strong analysis of a vast amount of daily Daihatsu’s direct-selling & indirect-selling data.",
+      "Improved the efficiency of daily data preparation with SQL utilization.",
+      "Introduced and learned about the business process especially in the scope of leasing company."
+    ],
+    date: 'February 2023 - July 2023'
   },
   seeds: {
     uniqueCode: 'seeds',
