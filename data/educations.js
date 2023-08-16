@@ -17,6 +17,17 @@ const umn = {
   date: 'August 2020 - present'
 };
 
+const bangkit = {
+  degree: 'Cloud Computing Learning Path',
+  institution: "Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka",
+  activities: [
+    'Dig into Git workflow deeper.',
+    'Learned about the fundamental of web development (especially back-end environment) based on cloud with GCP.',
+    'Soft skills and hard skills enhancement (provided by Bangkit).'
+  ],
+  date: 'August 2023 - present'
+};
+
 const bpk = {
   degree: 'Senior High School, Science',
   institution: 'SMAK BPK Penabur Bandar Lampung',
@@ -30,4 +41,4 @@ const bpk = {
   date: 'July 2017 - May 2020'
 };
 
-export { umn, bpk };
+export { umn, bangkit, bpk };

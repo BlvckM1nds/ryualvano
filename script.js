@@ -1,6 +1,6 @@
 'use strict';
 import { certifications } from "./data/certificates.js";
-import { umn as ryuUMN, bpk as ryuBPK } from "./data/educations.js";
+import { umn as ryuUMN, bangkit as ryuBangkit, bpk as ryuBPK } from "./data/educations.js";
 import { work as workExperiences, organizations as orgsExperiences } from "./data/experiences.js";
 
 // Footer year
@@ -24,6 +24,11 @@ const labelDegreeUMN = document.querySelector('.umn-degree');
 const labelInstitutionUMN = document.querySelector('.umn-institution');
 const labelDateUMN = document.querySelector('.umn-date');
 
+const bangkitActivityLists = document.querySelector('.bangkit-activity-lists');
+const labelDegreeBangkit = document.querySelector('.bangkit-degree');
+const labelInstitutionBangkit = document.querySelector('.bangkit-institution');
+const labelDateBangkit = document.querySelector('.bangkit-date');
+
 const bpkActivityLists = document.querySelector('.bpk-activity-lists');
 const labelDegreeBPK = document.querySelector('.bpk-degree');
 const labelInstitutionBPK = document.querySelector('.bpk-institution');
@@ -44,13 +49,13 @@ const certifLists = document.querySelector('.certif-lists');
 
 // ---------------------------------------------------------------------
 // FOOTER LIVE-TIME
-const liveTime = function() {
+const liveTime = function () {
   // day
   let day = new Date().toLocaleDateString(['en'], { weekday: "long" });
   let date = new Date().getDate();
   let month = new Date().toLocaleString('en', { month: "long" });
   let year = new Date().getFullYear();
-  
+
   // time
   let hour = `${new Date().getHours()}`.padStart(2, 0);
   let minute = `${new Date().getMinutes()}`.padStart(2, 0);
@@ -58,7 +63,7 @@ const liveTime = function() {
   labelLiveTime.textContent = `${day}, ${date} ${month} ${year}, ${hour}:${minute}:${second}`;
 };
 
-const printLiveTime = function() {
+const printLiveTime = function () {
   liveTime();
   setInterval(liveTime, 1000);
 };
@@ -68,7 +73,7 @@ printLiveTime();
 
 // ---------------------------------------------------------------------
 // Current Day
-const setCurrDay = function(date) {
+const setCurrDay = function (date) {
   const allDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const indexDay = date.getDay();
   labelCurrDay.textContent = `Happy ${allDays[indexDay]} !`;
@@ -100,7 +105,7 @@ navFooter.addEventListener('click', anchorScroll);
 // Header on scroll
 const aboutSection = document.getElementById('about');
 const navHeaderHeight = navHeader.getBoundingClientRect().height;
-const headerScrollCallback = function(entries, observer) {
+const headerScrollCallback = function (entries, observer) {
   const [entry] = entries;
 
   function greetings(date) {
@@ -114,10 +119,10 @@ const headerScrollCallback = function(entries, observer) {
       return 'Good Night !';
     };
   };
-  
+
   if (!entry.isIntersecting) {
     navHeader.classList.add('head-on-scroll');
-    
+
     labelCurrDay.textContent = `${greetings(new Date())}`;
     labelCurrDay.classList.add('nav-text-on-scroll');
 
@@ -126,18 +131,18 @@ const headerScrollCallback = function(entries, observer) {
 
     sideContacts.forEach(element => element.classList.add('side-on-scroll'));
     sideArrowUp.classList.add('show-arrow');
-    
+
     document.getElementById('header-logo').src = 'img/logo-ryu-navy.png';
   } else {
     navHeader.classList.remove('head-on-scroll');
     labelCurrDay.classList.remove('nav-text-on-scroll');
-    
+
     rightNavigations.classList.remove('nav-ul-on-scroll');
     navThreeBars.style.color = '#fff';
-    
+
     sideContacts.forEach(element => element.classList.remove('side-on-scroll'));
     sideArrowUp.classList.remove('show-arrow');
-    
+
     setCurrDay(new Date());
 
     document.getElementById('header-logo').src = 'img/logo-ryu-white.png';
@@ -155,7 +160,7 @@ aboutObserver.observe(aboutSection);
 // ---------------------------------------------------------------------
 // Fade in animations
 const allContainers = document.querySelectorAll('.container-page');
-const fadeInCallback = function(entries, observer) {
+const fadeInCallback = function (entries, observer) {
   const [entry] = entries;
   // console.log(entry.target);
 
@@ -178,21 +183,21 @@ allContainers.forEach(cont => {
 
 // ---------------------------------------------------------------------
 // EDUCATIONS
-const iterateLists = function(list, arr) {
+const iterateLists = function (list, arr) {
   arr.forEach(value => {
     const html = `<li class="edu-list">• ${value}</li>`;
     list.insertAdjacentHTML('beforeend', html);
   });
 };
 
-const displayDetailUMN = function(obj) {
-  const { 
-    degree, 
-    institution, 
-    courses, 
-    activities, 
-    awards, 
-    date 
+const displayDetailUMN = function (obj) {
+  const {
+    degree,
+    institution,
+    courses,
+    activities,
+    awards,
+    date
   } = obj;
 
   umnRelevantLists.innerHTML = '';
@@ -209,16 +214,34 @@ const displayDetailUMN = function(obj) {
 };
 displayDetailUMN(ryuUMN);
 
-const displayDetailBPK = function(obj) {
-  const { 
-    degree, 
-    institution, 
-    activities, 
-    date 
+const displayDetailBangkit = function (obj) {
+  const {
+    degree,
+    institution,
+    activities,
+    date
+  } = obj;
+
+  bangkitActivityLists.innerHTML = '';
+
+  labelDegreeBangkit.textContent = degree;
+  labelInstitutionBangkit.textContent = institution;
+  labelDateBangkit.textContent = date;
+
+  iterateLists(bangkitActivityLists, activities);
+};
+displayDetailBangkit(ryuBangkit);
+
+const displayDetailBPK = function (obj) {
+  const {
+    degree,
+    institution,
+    activities,
+    date
   } = obj;
 
   bpkActivityLists.innerHTML = '';
-  
+
   labelDegreeBPK.textContent = degree;
   labelInstitutionBPK.textContent = institution;
   labelDateBPK.textContent = date;
@@ -231,19 +254,19 @@ displayDetailBPK(ryuBPK);
 
 // ---------------------------------------------------------------------
 // WORK EXPERIENCES
-const displayExps = function(work, orgs) {
+const displayExps = function (work, orgs) {
   const workExps = Object.values(work);
   const orgsExps = Object.values(orgs);
 
   // Work Experiences
   workExps.reverse().forEach((workExp, i, arr) => {
     const {
-      uniqueCode, 
-      role, 
-      company, 
-      type, 
-      activities, 
-      date 
+      uniqueCode,
+      role,
+      company,
+      type,
+      activities,
+      date
     } = workExp;
 
     let activityLists = "";
@@ -273,11 +296,11 @@ const displayExps = function(work, orgs) {
   // Organitazion Experiences
   orgsExps.reverse().forEach((orgsExp, i, arr) => {
     const {
-      uniqueCode, 
-      role, 
-      organizer, 
-      activities, 
-      date 
+      uniqueCode,
+      role,
+      organizer,
+      activities,
+      date
     } = orgsExp;
 
     let activityLists = "";
@@ -307,11 +330,11 @@ const displayExps = function(work, orgs) {
 };
 displayExps(workExperiences, orgsExperiences);
 
-const displayCertificates = function(arr) {
+const displayCertificates = function (arr) {
   arr.forEach(certif => {
     const certifDetail = certif.toString().split('+');
-    const [ issuer, name, year, credential ] = certifDetail;
-    
+    const [issuer, name, year, credential] = certifDetail;
+
     const html = `
       <li class="certif"><span class="certi-span fa-solid fa-certificate"></span>[${Number(year)}] ${name} - ${issuer}</li>
       <a href="${credential}" class="credential" target="_blank">Show Credential <span class="credential-icon fa-solid fa-arrow-up-right-from-square"></span></a>

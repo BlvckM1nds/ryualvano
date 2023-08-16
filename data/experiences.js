@@ -14,6 +14,19 @@ const work = {
     ],
     date: 'June 2021 - present'
   },
+  sinarmas: {
+    uniqueCode: 'sml',
+    role: 'Data Management & Reporting',
+    company: 'Sinar Mas Land',
+    type: 'Internship',
+    activities: [
+      "Assisted monthly vendors performance data entry.",
+      "Created cover design on end-year supplier performance evaluation.",
+      "Developed real-time interactive dashboard on day-to-day vendor performance using Power BI",
+      "Handled end-year reporting based on Microsoft Excel."
+    ],
+    date: 'August 2023 - present'
+  },
   acc: {
     uniqueCode: 'acc',
     role: 'Data Analyst',
