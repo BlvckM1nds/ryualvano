@@ -22,7 +22,7 @@ const work = {
     activities: [
       "Assisted monthly vendors performance data entry.",
       "Created cover design on end-year supplier performance evaluation.",
-      "Developed real-time interactive dashboard on day-to-day vendor performance using Power BI",
+      "Developed real-time interactive dashboard on day-to-day vendor performance using Power BI.",
       "Handled end-year reporting based on Microsoft Excel."
     ],
     date: 'August 2023 - present'
