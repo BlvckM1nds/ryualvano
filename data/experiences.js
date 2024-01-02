@@ -25,7 +25,7 @@ const work = {
       "Developed real-time interactive dashboard on day-to-day vendor performance using Power BI.",
       "Handled end-year reporting based on Microsoft Excel."
     ],
-    date: 'August 2023 - present'
+    date: 'August 2023 - December 2023'
   },
   acc: {
     uniqueCode: 'acc',
