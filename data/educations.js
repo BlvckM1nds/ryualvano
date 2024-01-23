@@ -21,11 +21,12 @@ const bangkit = {
   degree: 'Cloud Computing Learning Path',
   institution: "Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka",
   activities: [
-    'Dig deeper into Git workflow and lifecycle.',
-    'Learned about the fundamental of web development (especially back-end environment) based on cloud with GCP.',
+    "Enhanced back-end web development especially on Google Cloud Platform utilization.",
+    "Learned about cloud database and storage management.",
+    "Contributed as API developer using Node.js as the server-side programming tools on Capstone Project.",
     'Soft skills and hard skills enhancement (provided by Bangkit).'
   ],
-  date: 'August 2023 - present'
+  date: 'August 2023 - January 2024'
 };
 
 const bpk = {

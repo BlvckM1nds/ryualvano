@@ -20,10 +20,9 @@ const work = {
     company: 'Sinar Mas Land',
     type: 'Internship',
     activities: [
-      "Assisted monthly vendors performance data entry.",
-      "Created cover design on end-year supplier performance evaluation.",
+      "Contributed in the making of end-year vendors’ performance evaluation reports with Microsoft Excel and Photoshop utilization.",
       "Developed real-time interactive dashboard on day-to-day vendor performance using Power BI.",
-      "Handled end-year reporting based on Microsoft Excel."
+      "Assisted monthly construction progress data entry."
     ],
     date: 'August 2023 - December 2023'
   },
@@ -33,7 +32,7 @@ const work = {
     company: 'Astra Credit Companies',
     type: 'Internship',
     activities: [
-      "Created real-time interactive dashboards of Daihatsu's daily raw data, outstanding account receivable, and weekly B2B performance using Looker Studio (also known as Google Data Studio) and Tableau.",
+      "Created real-time interactive dashboards of Daihatsu's outstanding accounts receivable, and weekly B2B performance using Looker Studio and Tableau.",
       "Performed a strong analysis of a vast amount of daily Daihatsu’s direct-selling & indirect-selling data.",
       "Improved the efficiency of daily data preparation with SQL utilization.",
       "Introduced and learned about the business process especially in the scope of leasing company."
@@ -46,9 +45,9 @@ const work = {
     company: 'Seeds',
     type: 'Internship',
     activities: [
-      'Fixed some of the minor bugs found by the QA team on the company landing page using ReactJS as the framework.',
-      'Implemented the user interface using existing components (UI slicing from Figma design) with Tailwind CSS.',
-      'Maintained the web page functionality by keeping the local branch in line with the main Git branch.',
+      "Assisted the developer team on fixing bugs on the company website.",
+      "User interface slicing from Figma design to structured code and styling with React and Tailwind CSS.",
+      "Maintained the web page functionality by keeping the local branch in line with the main Git branch.",
       'Given an overview of how a frontend web developer works especially with libraries and frameworks.'
     ],
     date: 'November 2022 - December 2022'
