@@ -21,7 +21,7 @@ const bangkit = {
   degree: 'Cloud Computing Learning Path',
   institution: "Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka",
   activities: [
-    "Enhanced back-end web development especially on Google Cloud Platform utilization.",
+    "Focusing on back-end web development especially on Google Cloud Platform utilization throughout the program.",
     "Learned about cloud database and storage management.",
     "Contributed as API developer using Node.js as the server-side programming tools on Capstone Project.",
     'Soft skills and hard skills enhancement (provided by Bangkit).'
